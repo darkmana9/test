@@ -1,0 +1,14 @@
+.wrapper {
+  display: grid;
+  grid-template-areas: 'h h' 'n n' 'c c';
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 2fr 5fr 10fr 2fr 4fr;
+
+  min-height: 100vh;
+
+  }
+
+
+
+
+
