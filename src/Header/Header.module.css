@@ -1,0 +1,17 @@
+
+.header {
+
+  display: flex;
+  justify-content: space-between;
+  }
+
+.header__logo{
+
+  }
+
+.wrapper {
+  grid-area: h;
+  background-color: darkblue;
+  }
+
+
