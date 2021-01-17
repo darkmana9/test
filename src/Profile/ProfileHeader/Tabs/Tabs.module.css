@@ -1,0 +1,11 @@
+.tabs__wrapper{
+    display: flex;
+    justify-content: space-around;
+}
+a.tabLink{
+    font-size: 14px;
+    font-weight: 700;
+    color: #9a9fbf;
+    display: block;
+    text-decoration: none;
+}

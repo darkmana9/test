@@ -1,12 +1,8 @@
 .wrapper {
-  display: grid;
-  grid-template-areas: 'h h' 'n c';
-  grid-template-columns: 1fr 6fr;
-  grid-template-rows: 1fr 4fr ;
-
-  min-height: 100vh;
-
-  }
+    background: #edf2f6;
+min-height: 100vh;
+    display: grid;
+}
 
 
 
