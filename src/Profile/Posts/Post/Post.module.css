@@ -1,0 +1,14 @@
+.wrapper{
+    background: white;
+    border-radius: 5px;
+}
+.postAuthor{
+    border-bottom: 1px solid;
+    height: 40px;
+    text-align: center;
+    margin-top: 20px;
+}
+.postText{
+    min-height: 50px;
+    padding: 10px;
+}

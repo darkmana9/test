@@ -1,14 +1,13 @@
 import React from 'react';
 import c from './Profile.module.css'
-import Comments from "./Comments/Comments";
+import ProfileHeader from "./ProfileHeader/ProfileHeader";
+import Posts from "./Posts/Posts";
 
 const Profile = () => {
     return (
-            <div className={c.content}>
-                <div className = {c.content__image}>
-
-                </div>
-            <Comments/>
+            <div className={c.wrapper}>
+            <ProfileHeader/>
+            <Posts />
             </div>
     );
 }

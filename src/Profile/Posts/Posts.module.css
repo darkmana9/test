@@ -1,0 +1,7 @@
+.wrapper{
+    width: 1200px;
+    margin: 30px auto;
+    height: fit-content;
+    display: grid;
+    grid-row-gap: 30px;
+}
