@@ -1,21 +1,28 @@
 import React from 'react'
 import style from './NewPostInput.module.css'
 
-const NewPostInput = (props) =>{
 
-    let newPostElement =  React.createRef();
+const NewPostInput = (props) => {
 
-    let addNewPost = () =>{
-        let text = newPostElement.current.value;
-        props.addPost(text);
+    let newPostElement = React.createRef();
 
-        newPostElement.current.value = null;
+    let addNewPost = () => {
+
+        props.dispatch({type: "ADD-NEW-POST", message: ""})
+
 
     }
 
-    return(
+    let textAreaChange = () => {
+        let text = newPostElement.current.value;
+
+        props.dispatch({type: "UPDATE-TEXT-AREA", newText: text})
+
+    }
+    return (
         <div className={style.wrapper}>
-            <textarea ref={newPostElement} className={style.newPostTextArea}></textarea>
+            <textarea value={props.newPostText} onChange={textAreaChange} ref={newPostElement}
+                      className={style.newPostTextArea}/>
             <button onClick={addNewPost} className={style.newPostButton}> new post</button>
         </div>
     )

@@ -1,9 +1,17 @@
 import React from 'react';
 import './index.css';
-import * as serviceWorker from './serviceWorker';
-import state from './redux/state'
-import {rerenderTree} from "./render"
+import ReactDOM from 'react-dom';
+import App from './App';
+import {store} from "./redux/state";
 
-rerenderTree(state);
+let rerenderTree = (props) => {
 
-serviceWorker.unregister();
+    ReactDOM.render(
+        <App state={props} dispatch={store.dispatch.bind(store)} />,
+        document.getElementById('root')
+    );
+}
+rerenderTree(store.getState());
+store.subscribe(rerenderTree);
+
+

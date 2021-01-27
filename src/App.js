@@ -6,7 +6,7 @@ import Profile from "./Profile/Profile";
 const App = (props) => {
     return (
         <div className={c.wrapper}>
-<Profile profilePage={props.state.profilePage} addPost={props.addPost}/>
+<Profile dispatch={props.dispatch} profilePage={props.state.profilePage} />
 
         </div>
     );

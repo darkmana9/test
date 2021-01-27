@@ -9,7 +9,7 @@ const Profile = (props) => {
     return (
             <div className={c.wrapper}>
             <ProfileHeader/>
-            <NewPostInput addPost={props.addPost}/>
+            <NewPostInput dispatch={props.dispatch} newPostText={props.profilePage.newPostText}/>
             <Posts postData={props.profilePage.postData} />
             </div>
     );
