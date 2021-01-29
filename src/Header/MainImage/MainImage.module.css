@@ -1,0 +1,9 @@
+.mainImage__wrapper {
+    width: 100%;
+
+}
+
+img.mainImage{
+    border-radius: 5px 5px 0 0;
+    width: 100%;
+}

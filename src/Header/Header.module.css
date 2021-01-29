@@ -1,17 +1,6 @@
+.header__wrapper {
 
-.header {
-
-  display: flex;
-  justify-content: space-between;
+  background: white;
+  border-radius: 5px;
+  height: fit-content;
   }
-
-.header__logo{
-
-  }
-
-.wrapper {
-  grid-area: h;
-  background-color: darkblue;
-  }
-
-
