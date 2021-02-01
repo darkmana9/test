@@ -3,4 +3,7 @@
   background: white;
   border-radius: 5px;
   height: fit-content;
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
   }

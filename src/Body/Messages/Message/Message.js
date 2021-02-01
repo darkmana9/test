@@ -9,8 +9,7 @@ export const Message = (props) => {
         <div className = {style.wrapper}>
 
             <div>{props.messageText}</div>
-            <div>{props.messageAuthor}</div>
-            <div>{props.messageDate}</div>
+
 
 
         </div>

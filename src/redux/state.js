@@ -1,5 +1,7 @@
 const ADD_NEW_POST = "ADD-NEW-POST";
 const UPDATE_TEXT_AREA = "UPDATE-TEXT-AREA";
+const UPDATE_NEW_MESSAGE_TEXT = "UPDATE-NEW-MESSAGE-TEXT"
+const SEND_MESSAGE = "SEND-MESSAGE"
 
 export let store = {
     _state: {
@@ -8,13 +10,8 @@ export let store = {
             newPostText: "",
         },
         messages: {
-            messageData: [
-                {
-                    messageText: "Hi hihi",
-                    messageAuthor: "Andrey",
-                    messageDate: "01.01.01"
-                }
-            ],
+            messageData: [],
+            newMessageText: "",
         },
 
     },
@@ -35,13 +32,21 @@ export let store = {
                 authorName: "123",
                 postText: this._state.profilePage.newPostText,
             };
-
             this._state.profilePage.postData.push(newPost);
             this._state.profilePage.newPostText = "";
             this.callSub(this._state)
         } else if (action.type === "UPDATE-TEXT-AREA") {
             this._state.profilePage.newPostText = action.newText;
-            debugger
+            this.callSub(this._state);
+        } else if (action.type === "SEND-MESSAGE") {
+            let newMessage = {
+               messageText:  this._state.messages.newMessageText,
+            };
+            this._state.messages.messageData.push(newMessage);
+            this._state.messages.newMessageText = "";
+            this.callSub(this._state);
+        } else if (action.type === "UPDATE-NEW-MESSAGE-TEXT") {
+            this._state.messages.newMessageText = action.newText;
             this.callSub(this._state);
         }
 
@@ -60,6 +65,18 @@ export const updateTextAreaActionCreator = (text) => {
         newText: text,
     }
 }
+export const sendMessageCreator = () => {
+    return {
+        type: SEND_MESSAGE,
+    }
+}
+export const updateNewMessageTextCreator = (text) => {
+    return {
+        type: UPDATE_NEW_MESSAGE_TEXT,
+        newText: text,
+    }
+}
+
 
 
 

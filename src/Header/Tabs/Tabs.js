@@ -1,26 +1,27 @@
 import React from "react";
 import c from "./Tabs.module.css"
+import {NavLink} from "react-router-dom";
 
 const Tabs = () => {
     return (
         <div className={c.tabs__wrapper}>
-            <navLink to="/profile" className={c.tabLink}>profile
-            </navLink>
-            <navLink to="/messages" className={c.tabLink}>
-                messages
-            </navLink>
-            <navLink to="#" className={c.tabLink}>
+            <NavLink to="/profile" className={c.tabLink}>Profile
+            </NavLink>
+            <NavLink to="/messages" className={c.tabLink}>
+                Messages
+            </NavLink>
+            <NavLink to="#" className={c.tabLink}>
                 Friends
-            </navLink>
-            <navLink to="#" className={c.tabLink}>
+            </NavLink>
+            <NavLink to="#" className={c.tabLink}>
                 Photos
-            </navLink>
-            <navLink to="#" className={c.tabLink}>
+            </NavLink>
+            <NavLink to="#" className={c.tabLink}>
                 Videos
-            </navLink>
-            <navLink to="#" className={c.tabLink}>
+            </NavLink>
+            <NavLink to="#" className={c.tabLink}>
                 ...
-            </navLink>
+            </NavLink>
 
         </div>
     );

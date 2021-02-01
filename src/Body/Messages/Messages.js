@@ -6,9 +6,9 @@ import {NewMessageInput} from "./NewMessageInput/NewMessageInput";
 
 export const Messages = (props) => {
 
-    let preparedMessage = props.messages.messageData.map(message => {
+    let preparedMessage = props.state.messages.messageData.map(message => {
 
-return <Message messageText = {message.messageText} messageAuthor = {message.messageAuthor} messageDate={message.messageDate}/>
+            return <Message messageText = {message.messageText}/>
         }
     )
 
@@ -21,7 +21,7 @@ return <Message messageText = {message.messageText} messageAuthor = {message.mes
             <Senders/>
         </div>
             <div className = {style.newMessageInput__wrapper}>
-             <NewMessageInput/>
+             <NewMessageInput dispatch={props.dispatch} newMessageText={props.state.messages.newMessageText}/>
             </div>
         </div>
     )
