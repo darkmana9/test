@@ -1,17 +1,16 @@
 import React from 'react'
 import style from './NewPostInput.module.css'
-import {addPostActionCreator, updateTextAreaActionCreator} from "../../../redux/state";
 
 const NewPostInput = (props) => {
 
     let newPostElement = React.createRef();
 
     let addNewPost = () => {
-        props.dispatch(addPostActionCreator())
+        props.addPost()
     }
     let textAreaChange = () => {
         let text = newPostElement.current.value;
-        props.dispatch(updateTextAreaActionCreator(text))
+        props.updateTextArea(text)
     }
     return (
         <div className = {style.wrapper}>

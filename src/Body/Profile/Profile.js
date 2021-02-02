@@ -2,14 +2,15 @@ import React from 'react';
 import c from './Profile.module.css'
 
 import Posts from "./Posts/Posts";
-import NewPostInput from "./NewPostInput/NewPostInput";
+import NewPostInputContainer from "./Posts/NewPostInput/NewPostInputContainer";
 
 const Profile = (props) => {
-
+    debugger
     return (
-            <div className={c.wrapper}>
-            <NewPostInput dispatch={props.dispatch} newPostText={props.profilePage.newPostText}/>
-            <Posts postData={props.profilePage.postData} />
+        <div className = {c.wrapper}>
+
+            <NewPostInputContainer store={props.store}/>
+            <Posts postData = {props.state.profilePage.postData}/>
             </div>
     );
 }
