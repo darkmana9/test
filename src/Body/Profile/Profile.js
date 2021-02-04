@@ -5,7 +5,7 @@ import Posts from "./Posts/Posts";
 import NewPostInputContainer from "./Posts/NewPostInput/NewPostInputContainer";
 
 const Profile = (props) => {
-    debugger
+
     return (
         <div className = {c.wrapper}>
 

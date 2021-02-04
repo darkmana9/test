@@ -7,6 +7,7 @@ const NewPostInput = (props) => {
 
     let addNewPost = () => {
         props.addPost()
+        newPostElement.current.value = '';
     }
     let textAreaChange = () => {
         let text = newPostElement.current.value;

@@ -10,7 +10,6 @@ const NewPostInputContainer = (props) => {
     let onTextAreaChange = (text) => {
         props.store.dispatch(updateTextAreaActionCreator(text))
     }
-
     return (
         <NewPostInput props={props.store.newPostText} addPost={onAddPost} updateTextArea={onTextAreaChange}/>
     )

@@ -9,7 +9,7 @@ debugger
     return (
         <div className = {style.wrapper}>
              <Route render={()=><Profile dispatch = {props.dispatch}  state = {props.state} store={props.store}/>} path="/profile"/>
-            <Route render={()=><Messages dispatch={props.dispatch} state = {props.state}/> }  path="/messages" />
+            <Route render={()=><Messages dispatch={props.dispatch} state = {props.state} store={props.store}/> }  path="/messages" />
         </div>
     )
 }

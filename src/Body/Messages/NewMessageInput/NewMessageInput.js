@@ -1,25 +1,27 @@
 import React from "react";
 import style from "./NewMessageInput.module.css"
-import {sendMessageCreator, updateNewMessageTextCreator} from "../../../redux/message-reducer";
 
 export const NewMessageInput = (props) => {
 
     let messageText = React.createRef();
 
     let sendMessage = () => {
-      props.dispatch(sendMessageCreator())
+        props.sendMessage();
+       messageText.current.value = '';
     }
 
     let textAreaChange = () => {
         let text = messageText.current.value;
-        props.dispatch(updateNewMessageTextCreator(text))
+        props.textAreaChange(text);
+
     }
 
     return (
-        <div className={style.wrapper}>
-            <textarea onChange={textAreaChange} value={props.newMessageText} className={style.textArea} ref={messageText}>
+        <div className = {style.wrapper}>
+            <textarea onChange = {textAreaChange} value = {props.newMessageText} className = {style.textArea}
+                      ref = {messageText}>
             </textarea>
-            <button onClick={sendMessage}>Send message</button>
+            <button onClick = {sendMessage}>Send message</button>
         </div>
     )
 }
