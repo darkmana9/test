@@ -7,23 +7,32 @@ let initialState = {
 }
 
 
-export const profileReducer = (state = initialState,action) => {
+export const profileReducer = (state = initialState, action) => {
     switch (action.type) {
-        case ADD_NEW_POST:
+        case ADD_NEW_POST: {
+            let stateCopy = {...state}
             let newPost = {
                 authorName: "123",
-                postText: state.newPostText,
+                postText: stateCopy.newPostText,
             };
-            state.postData.push(newPost);
-            state.newPostText = "";
-            return state;
-        case UPDATE_TEXT_AREA:
-            state.newPostText = action.newText;
-            return state;
-        default: return  state;
-    }
 
+            stateCopy.postData = [...state.postData]
+            stateCopy.postData.push(newPost);
+            stateCopy.newPostText = "";
+            return stateCopy;
+        }
+        case UPDATE_TEXT_AREA: {
+            let stateCopy = {...state}
+            stateCopy.newPostText = action.newText;
+            return stateCopy;
+        }
+        default: {
+            return state;
+        }
+    }
 }
+
+
 
 export const addPostActionCreator = () => {
     return {
