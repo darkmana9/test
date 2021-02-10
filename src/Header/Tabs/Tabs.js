@@ -10,8 +10,8 @@ const Tabs = () => {
             <NavLink to="/messages" className={c.tabLink}>
                 Messages
             </NavLink>
-            <NavLink to="#" className={c.tabLink}>
-                Friends
+            <NavLink to="/users" className={c.tabLink}>
+                Users
             </NavLink>
             <NavLink to="#" className={c.tabLink}>
                 Photos

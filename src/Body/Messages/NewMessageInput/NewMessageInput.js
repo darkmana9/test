@@ -7,11 +7,12 @@ export const NewMessageInput = (props) => {
 
     let sendMessage = () => {
         props.sendMessage();
-       messageText.current.value = '';
+        messageText.current.value = '';
     }
 
     let textAreaChange = () => {
         let text = messageText.current.value;
+
         props.textAreaChange(text);
 
     }

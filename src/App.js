@@ -5,7 +5,7 @@ import {BrowserRouter} from "react-router-dom";
 import {Body} from "./Body/Body";
 
 const App = (props) => {
-    debugger
+
     return (
         <BrowserRouter>
         <div className = {c.wrapper}>
