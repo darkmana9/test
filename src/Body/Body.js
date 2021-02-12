@@ -4,6 +4,7 @@ import {Route} from "react-router-dom";
 import Profile from "./Profile/Profile";
 import {MessagesContainer} from "./Messages/MessagesContainer";
 import {Users} from "./Users/Users";
+import {UsersContainer} from "./Users/UsersContainer";
 
 export const Body = (props) => {
 
@@ -11,7 +12,7 @@ export const Body = (props) => {
         <div className = {style.wrapper}>
             <Route render = {() => <Profile/>} path = "/profile"/>
             <Route render = {() => <MessagesContainer/>} path = "/messages"/>
-            <Route render = {() => <Users/>} path = "/users"/>
+            <Route render = {() => <UsersContainer/>} path = "/users"/>
         </div>
     )
 }

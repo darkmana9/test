@@ -1,40 +1,22 @@
 const FOLLOW_USER = 'FOLLOW-USER'
 const UN_FOLLOW_USER = 'UN-FOLLOW-USER'
+const SET_USERS = 'SET_USERS'
 
 let initialState = {
     users: [
-        {
-            id: '1',
-            isFollowed: true,
-            fullName: 'Andrey',
-            status: 'bad',
-            location: {
-                city: 'novopolotsk',
-                country: 'belarus',
-            },
-        },
-        {
-            id: '2',
-            isFollowed: false,
-            fullName: 'Dimon',
-            status: 'good',
-            location: {
-                city: 'minsk',
-                country: 'belarus',
-            },
-        }
+
     ]
 }
 
-export const userReducer = (state = initialState, action) => {
+export const usersReducer = (state = initialState, action) => {
 
     switch (action.type) {
         case FOLLOW_USER: {
 
-            return  {
+            return {
                 ...state,
                 users: state.users.map(user => {
-                    if(user.id === action.userId){
+                    if (user.id === action.userId) {
                         return {...user, isFollowed: true}
                     }
                     return user;
@@ -46,12 +28,18 @@ export const userReducer = (state = initialState, action) => {
             return {
                 ...state,
                 users: state.users.map(user => {
-                    if(user.id === action.userId){
+                    if (user.id === action.userId) {
                         return {...user, isFollowed: false}
                     }
                     return user;
                 })
 
+            }
+        }
+        case SET_USERS: {
+            return {
+                ...state,
+                users: [...state.users,...action.users]
             }
         }
         default: {
@@ -61,17 +49,24 @@ export const userReducer = (state = initialState, action) => {
 
 }
 
-const followUserActionCreator = (userId) => {
+export const followUserActionCreator = (userId) => {
     return {
         type: FOLLOW_USER,
         userId
     }
 }
 
-const unFollowUserActionCreator = (userId) => {
+export const unFollowUserActionCreator = (userId) => {
     return {
         type: UN_FOLLOW_USER,
         userId
+    }
+}
+
+export const setUsersActionCreator = (users) => {
+    return {
+        type: SET_USERS,
+        users,
     }
 }
 
