@@ -1,10 +1,18 @@
 import React from "react";
+import axios from "axios";
 
 export const Users = (props) => {
-
-
-
-    if (props.users.length === 0) {
+if (!props.users) {
+    axios.get("https://social-network.samuraijs.com/api/1.0/users", {
+        withCredentials: true, headers: {
+            'API-KEY': 'bab5eb69-9682-4eb9-abfa-a16987f89e90'
+        }
+    }).then(response => {
+        debugger
+        props.setUsers(response.data.items)
+    })
+}
+    /*if (props.users.length === 0) {
         props.setUsers([
             {
                 id: '1',
@@ -27,23 +35,23 @@ export const Users = (props) => {
                 },
             }
         ])
-    }
+    }*/
     return (
         <div>
             {props.users.map(user => {
                 return (
-                    <div key = {user.id}>
-                       <p>{user.fullName}</p>
+                    <div key={user.id}>
+                        <p>{user.fullName}</p>
                         {user.isFollowed ?
-                            <button onClick = {() => {
+                            <button onClick={() => {
                                 props.unFollow(user.id)
                             }}>follow</button>
-                            : <button onClick = {() => {
+                            : <button onClick={() => {
                                 props.follow(user.id)
                             }}>unFollow</button>}
-                        <p>{user.location.city}</p>
-                       <p>{user.location.country}</p>
-                       <p>{user.status}</p>
+                       {/* <p>{user.location.city}</p>*/}
+                        {/*<p>{user.location.country}</p>*/}
+                        <p>{user.status}</p>
                     </div>
                 )
             })}
