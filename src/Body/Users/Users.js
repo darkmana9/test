@@ -2,7 +2,7 @@ import React from "react";
 import axios from "axios";
 
 export const Users = (props) => {
-if (!props.users) {
+if (props.users.length === 0) {
     axios.get("https://social-network.samuraijs.com/api/1.0/users", {
         withCredentials: true, headers: {
             'API-KEY': 'bab5eb69-9682-4eb9-abfa-a16987f89e90'
@@ -41,7 +41,7 @@ if (!props.users) {
             {props.users.map(user => {
                 return (
                     <div key={user.id}>
-                        <p>{user.fullName}</p>
+                        <p>{user.name}</p>
                         {user.isFollowed ?
                             <button onClick={() => {
                                 props.unFollow(user.id)
