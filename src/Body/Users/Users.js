@@ -2,9 +2,7 @@ import React from "react";
 
 export const Users = (props) => {
 
-    axios.get("").then(response => {
-        props.setUsers()
-    })
+
 
     if (props.users.length === 0) {
         props.setUsers([
