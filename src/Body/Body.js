@@ -3,7 +3,6 @@ import style from "./Body.module.css"
 import {Route} from "react-router-dom";
 import Profile from "./Profile/Profile";
 import {MessagesContainer} from "./Messages/MessagesContainer";
-import {Users} from "./Users/Users";
 import {UsersContainer} from "./Users/UsersContainer";
 
 export const Body = (props) => {
