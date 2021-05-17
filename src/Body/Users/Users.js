@@ -1,50 +1,46 @@
 import React from "react";
-import axios from "axios";
+import style from "./Users.module.css";
+import userPhoto from '../../assets/user/default-user.jpg'
+import {NavLink} from "react-router-dom";
 
-class Users extends React.Component {
-
-    constructor(props) {
-        super(props);
-
+const Users = (props) => {
+    let pages = [];
+    let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize);
+    for (let i = 1; i <= pagesCount; i++) {
+        pages.push(i)
     }
-
-    componentDidMount() {
-
-            axios.get("https://social-network.samuraijs.com/api/1.0/users", {
-                withCredentials: true, headers: {
-                    'API-KEY': 'bab5eb69-9682-4eb9-abfa-a16987f89e90'
-                }
-            }).then(response => {
-                debugger
-                this.props.setUsers(response.data.items)
-            })
-
-    }
-
-    render() {
-        return <div>
-            {this.props.users.map(user => {
-                return (
-                    <div key={user.id}>
-                        <p>{user.name}</p>
-                        {user.isFollowed ?
-                            <button onClick={() => {
-                                this.props.unFollow(user.id)
-                            }}>follow</button>
-                            : <button onClick={() => {
-                                this.props.follow(user.id)
-                            }}>unFollow</button>}
-                        {/* <p>{user.location.city}</p>*/}
-                        {/*<p>{user.location.country}</p>*/}
-                        <p>{user.status}</p>
-                    </div>
-                )
+    return <div>
+            <div className = {style.pagination__wrapper}>
+            {pages.map(el => {
+                return <div onClick = {() => {
+                    props.changeCurrentPage(el)
+                }}
+                            className = {props.currentPage === el ? style.active + " " + style.pagination__item : style.pagination__item}>{el}</div>
             })}
+            </div>
+        {props.users.map(user => {
+            return (
+                <div key = {user.id}>
+                    <NavLink to = {'/profile/' + user.id}>
+                        <img className = {style.userPhoto}
+                             src = {user.photos.small != null ? user.photos.small : userPhoto}/>
+                    </NavLink>
+                        <p>{user.name}</p>
+                    {user.followed ?
+                        <button disabled = {props.followingInProgress.some(id => id === user.id)}
+                                onClick = {() => {
+                                    props.unFollow(user.id)
+                                }}>unFollow</button>
+                        : <button disabled = {props.followingInProgress.some(id => id === user.id)}
+                                  onClick = {() => {
+                                      props.follow(user.id)
+                                  }}>Follow</button>}
+                    <p>{user.status}</p>
+                            </div>
+            )
+        })}
 
-        </div>
-    }
-
+                            </div>
 }
 
 export default Users
-

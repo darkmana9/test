@@ -2,7 +2,7 @@ import React from "react";
 import c from "./Tabs.module.css"
 import {NavLink} from "react-router-dom";
 
-const Tabs = () => {
+const Tabs = (props) => {
     return (
         <div className={c.tabs__wrapper}>
             <NavLink to="/profile" className={c.tabLink}>Profile
@@ -13,9 +13,12 @@ const Tabs = () => {
             <NavLink to="/users" className={c.tabLink}>
                 Users
             </NavLink>
-            <NavLink to="#" className={c.tabLink}>
-                Photos
-            </NavLink>
+            <div >
+                {props.isAuth ? props.login :  <NavLink to="/login" className={c.tabLink}>
+                Login
+            </NavLink>}
+
+            </div>
             <NavLink to="#" className={c.tabLink}>
                 Videos
             </NavLink>

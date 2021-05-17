@@ -2,13 +2,13 @@ import React from 'react'
 import c from './Header.module.css'
 import MainImage from "./MainImage/MainImage"
 import Avatar from "./Avatar/Avatar"
-import Tabs from "./Tabs/Tabs"
+import TabsContainer from "./Tabs/TabsContainer";
 
 const Header = () => {
     return (
-        <div className={c.header__wrapper}>
+        <div className = {c.header__wrapper}>
             <MainImage/>
-            <Tabs/>
+            <TabsContainer/>
             <Avatar/>
         </div>
     );

@@ -1,0 +1,227 @@
+{
+  "users": [
+    {
+      "name": "Radchenko_David",
+      "id": 16940,
+      "uniqueUrlName": null,
+      "photos": {
+        "small": null,
+        "large": null
+      },
+      "status": null,
+      "followed": false
+    },
+    {
+      "name": "RadchenkoDavid",
+      "id": 16939,
+      "uniqueUrlName": null,
+      "photos": {
+        "small": null,
+        "large": null
+      },
+      "status": null,
+      "followed": false
+    },
+    {
+      "name": "NeKisliyKodFrom1990",
+      "id": 16938,
+      "uniqueUrlName": null,
+      "photos": {
+        "small": null,
+        "large": null
+      },
+      "status": null,
+      "followed": false
+    },
+    {
+      "name": "NeKisliyKod",
+      "id": 16937,
+      "uniqueUrlName": null,
+      "photos": {
+        "small": null,
+        "large": null
+      },
+      "status": null,
+      "followed": false
+    },
+    {
+      "name": "Vadim_10",
+      "id": 16936,
+      "uniqueUrlName": null,
+      "photos": {
+        "small": null,
+        "large": null
+      },
+      "status": null,
+      "followed": false
+    },
+    {
+      "name": "ard",
+      "id": 16935,
+      "uniqueUrlName": null,
+      "photos": {
+        "small": null,
+        "large": null
+      },
+      "status": null,
+      "followed": false
+    },
+    {
+      "name": "vaheloyo",
+      "id": 16934,
+      "uniqueUrlName": null,
+      "photos": {
+        "small": null,
+        "large": null
+      },
+      "status": null,
+      "followed": false
+    },
+    {
+      "name": "VictorUp",
+      "id": 16933,
+      "uniqueUrlName": null,
+      "photos": {
+        "small": null,
+        "large": null
+      },
+      "status": null,
+      "followed": false
+    },
+    {
+      "name": "Wood_85",
+      "id": 16932,
+      "uniqueUrlName": null,
+      "photos": {
+        "small": null,
+        "large": null
+      },
+      "status": null,
+      "followed": false
+    },
+    {
+      "name": "Kapachenia",
+      "id": 16931,
+      "uniqueUrlName": null,
+      "photos": {
+        "small": null,
+        "large": null
+      },
+      "status": null,
+      "followed": false
+    },
+    {
+      "name": "Aaron18",
+      "id": 16930,
+      "uniqueUrlName": null,
+      "photos": {
+        "small": null,
+        "large": null
+      },
+      "status": null,
+      "followed": false
+    },
+    {
+      "name": "xsmirx",
+      "id": 16929,
+      "uniqueUrlName": null,
+      "photos": {
+        "small": null,
+        "large": null
+      },
+      "status": null,
+      "followed": false
+    },
+    {
+      "name": "UserForTests",
+      "id": 16928,
+      "uniqueUrlName": null,
+      "photos": {
+        "small": null,
+        "large": null
+      },
+      "status": null,
+      "followed": false
+    },
+    {
+      "name": "Paranouk",
+      "id": 16927,
+      "uniqueUrlName": null,
+      "photos": {
+        "small": null,
+        "large": null
+      },
+      "status": null,
+      "followed": false
+    },
+    {
+      "name": "Ayazhan",
+      "id": 16926,
+      "uniqueUrlName": null,
+      "photos": {
+        "small": null,
+        "large": null
+      },
+      "status": null,
+      "followed": true
+    },
+    {
+      "name": "Mobisvit",
+      "id": 16925,
+      "uniqueUrlName": null,
+      "photos": {
+        "small": null,
+        "large": null
+      },
+      "status": null,
+      "followed": true
+    },
+    {
+      "name": "MarkSand12",
+      "id": 16924,
+      "uniqueUrlName": null,
+      "photos": {
+        "small": null,
+        "large": null
+      },
+      "status": null,
+      "followed": true
+    },
+    {
+      "name": "MarkSand",
+      "id": 16923,
+      "uniqueUrlName": null,
+      "photos": {
+        "small": null,
+        "large": null
+      },
+      "status": null,
+      "followed": true
+    },
+    {
+      "name": "Hrant",
+      "id": 16922,
+      "uniqueUrlName": null,
+      "photos": {
+        "small": null,
+        "large": null
+      },
+      "status": null,
+      "followed": true
+    },
+    {
+      "name": "Gerasik",
+      "id": 16921,
+      "uniqueUrlName": null,
+      "photos": {
+        "small": null,
+        "large": null
+      },
+      "status": null,
+      "followed": true
+    }
+  ],
+  "totalCount": {
+    "count": 20
+  }
+}

@@ -4,6 +4,7 @@ import {Message} from "./Message/Message";
 import {Senders} from "./Senders/Senders";
 
 import NewMessageInputContainer from "./NewMessageInput/NewMessageInputContainer";
+import {Redirect} from "react-router-dom";
 
 export const Messages = (props) => {
 
@@ -11,7 +12,9 @@ export const Messages = (props) => {
             return <Message messageText={message.messageText}/>
         }
     )
-
+  if(!props.isAuth){
+      return <Redirect to={'/login'}/>
+  }
     return (
         <div className={style.wrapper}>
             <div className={style.message__wrapper}>

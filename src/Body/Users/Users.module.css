@@ -1,0 +1,17 @@
+.pagination__wrapper{
+    flex-direction: row;
+    display: flex;
+    }
+.pagination__item{
+cursor: pointer;
+    margin-right: 4px;
+
+
+    }
+.active{
+font-weight: bold;
+    color: red;
+    }
+.userPhoto{
+width: 150px;
+    }
