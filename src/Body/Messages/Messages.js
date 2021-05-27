@@ -4,27 +4,24 @@ import {Message} from "./Message/Message";
 import {Senders} from "./Senders/Senders";
 
 import NewMessageInputContainer from "./NewMessageInput/NewMessageInputContainer";
-import {Redirect} from "react-router-dom";
 
 export const Messages = (props) => {
 
     let preparedMessage = props.messageData.map(message => {
-            return <Message messageText={message.messageText}/>
+            return <Message messageText = {message.messageText}/>
         }
     )
-  if(!props.isAuth){
-      return <Redirect to={'/login'}/>
-  }
+   
     return (
-        <div className={style.wrapper}>
-            <div className={style.message__wrapper}>
+        <div className = {style.wrapper}>
+            <div className = {style.message__wrapper}>
                 {preparedMessage}
             </div>
-            <div className={style.senders__wrapper}>
+            <div className = {style.senders__wrapper}>
                 <Senders/>
             </div>
-            <div className={style.newMessageInput__wrapper}>
-                <NewMessageInputContainer />
+            <div className = {style.newMessageInput__wrapper}>
+                <NewMessageInputContainer/>
 
             </div>
         </div>

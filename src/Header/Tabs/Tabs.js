@@ -5,12 +5,12 @@ import {NavLink} from "react-router-dom";
 const Tabs = (props) => {
     return (
         <div className={c.tabs__wrapper}>
-            <NavLink to="/profile" className={c.tabLink}>Profile
+            <NavLink to="/profile/15002" className={c.tabLink}>Profile
             </NavLink>
             <NavLink to="/messages" className={c.tabLink}>
                 Messages
             </NavLink>
-            <NavLink to="/users" className={c.tabLink}>
+            <NavLink to="/users/" className={c.tabLink}>
                 Users
             </NavLink>
             <div >
