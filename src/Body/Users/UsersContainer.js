@@ -29,6 +29,7 @@ class UsersContainer extends React.Component {
     }
 
     changeCurrentPage = (currentPage) => {
+        debugger
         this.props.getUsers(this.props.pageSize, currentPage)
 
     }
