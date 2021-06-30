@@ -4,7 +4,7 @@ import {Route} from "react-router-dom";
 import MessagesContainer from "./Messages/MessagesContainer";
 import UsersContainer from "./Users/UsersContainer";
 import ProfileContainer from "./Profile/ProfileContainer";
-import {Login} from "../Login/Login";
+import Login from "../Login/Login";
 
 export const Body = (props) => {
 

@@ -1,13 +1,11 @@
 import React from "react";
 import Tabs from "./Tabs";
 import {connect} from "react-redux";
-import {getUserData} from "../../redux/auth-reducer";
+import {getUserData, logout} from "../../redux/auth-reducer";
 
 class TabsContainer extends React.Component {
 
-    componentDidMount() {
-        this.props.getUserData();
-    }
+
 
     render() {
         return (
@@ -25,5 +23,5 @@ const mapStateToProps = (state) => {
     )
 }
 export default connect(mapStateToProps, {
-    getUserData
+     logout
 })(TabsContainer)

@@ -7,7 +7,7 @@ const SET_STATUS = "SET_STATUS"
 
 let initialState = {
     postData: [],
-    newPostText: "",
+
     userProfile: null,
     status: '',
 
@@ -20,17 +20,12 @@ export const profileReducer = (state = initialState, action) => {
 
             return {
                 ...state,
-                postData: [...state.postData, {authorName: '123', postText: state.newPostText}],
-                newPostText: "",
+                postData: [...state.postData, {authorName: '123', postText: action.newPostText}],
+
             }
 
         }
-        case UPDATE_TEXT_AREA: {
-            return {
-                ...state,
-                newPostText: action.newText,
-            }
-        }
+
         case SET_USER_PROFILE: {
             return {
                 ...state,
@@ -49,9 +44,10 @@ export const profileReducer = (state = initialState, action) => {
     }
 }
 
-export const addPostActionCreator = () => {
+export const addPostActionCreator = (newPostText) => {
     return {
-        type: ADD_NEW_POST
+        type: ADD_NEW_POST,
+        newPostText
     }
 }
 export const updateTextAreaActionCreator = (text) => {

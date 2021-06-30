@@ -3,20 +3,6 @@ import {sendMessageCreator, updateNewMessageTextCreator} from "../../../redux/me
 import {NewMessageInput} from "./NewMessageInput";
 import {connect} from "react-redux";
 
-/*const NewMessageInputContainer = (props) => {
-    let sendMessage = () => {
-        props.store.dispatch(sendMessageCreator())
-    }
-
-    let textAreaChange = (text) => {
-        props.store.dispatch(updateNewMessageTextCreator(text))
-    }
-    return (
-        <NewMessageInput sendMessage={sendMessage} textAreaChange={textAreaChange}
-                         newMessageText={props.store.newPostText}/>
-    )
-
-}*/
 
 let mapStateToProps = (state) => {
     return {
@@ -25,11 +11,8 @@ let mapStateToProps = (state) => {
 }
 let mapDispatchToProps = (dispatch) => {
     return {
-        sendMessage: () => {
-            dispatch(sendMessageCreator())
-        },
-        textAreaChange: (text) => {
-            dispatch(updateNewMessageTextCreator(text))
+        sendMessage: (newMessageText) => {
+            dispatch(sendMessageCreator(newMessageText))
         },
     }
 }
